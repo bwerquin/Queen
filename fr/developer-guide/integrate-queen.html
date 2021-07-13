@@ -1,0 +1,611 @@
+
+<!DOCTYPE HTML>
+<html lang="fr" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Intégrer Queen en tant que Web Component (embarqué) · Queen</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="integrate-example.html" />
+    
+    
+    <link rel="prev" href="api.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Tapez pour rechercher" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Guide du développeur</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="getting-started.html">
+            
+                <a href="getting-started.html">
+            
+                    
+                    Démarrage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="application.html">
+            
+                <a href="application.html">
+            
+                    
+                    Découvrir l'application
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="components-orchestrator.html">
+            
+                <a href="components-orchestrator.html">
+            
+                    
+                    Orchestrateur de composant
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="code-organization.html">
+            
+                <a href="code-organization.html">
+            
+                    
+                    Organisation du code
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="specificity/specificity.html">
+            
+                <a href="specificity/specificity.html">
+            
+                    
+                    Spécificité
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.3.1" data-path="specificity/web-component.html">
+            
+                <a href="specificity/web-component.html">
+            
+                    
+                    Web component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3.2" data-path="specificity/standalone-embedded.html">
+            
+                <a href="specificity/standalone-embedded.html">
+            
+                    
+                    Mode : autonome ou embarqué
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3.3" data-path="specificity/offline.html">
+            
+                <a href="specificity/offline.html">
+            
+                    
+                    Mode offline : Service-worker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3.4" data-path="specificity/update.html">
+            
+                <a href="specificity/update.html">
+            
+                    
+                    Mise à jour
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3.5" data-path="specificity/styles.html">
+            
+                <a href="specificity/styles.html">
+            
+                    
+                    Gestion des styles
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="multilanguage.html">
+            
+                <a href="multilanguage.html">
+            
+                    
+                    Multi-langue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="data-model/data-model.html">
+            
+                <a href="data-model/data-model.html">
+            
+                    
+                    Modèle de données
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.5.1" data-path="data-model/questionnaire.html">
+            
+                <a href="data-model/questionnaire.html">
+            
+                    
+                    Questionnaire
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5.2" data-path="data-model/survey-unit.html">
+            
+                <a href="data-model/survey-unit.html">
+            
+                    
+                    Unité enquêtée
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.6" data-path="api.html">
+            
+                <a href="api.html">
+            
+                    
+                    API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3" data-path="integrate-queen.html">
+            
+                <a href="integrate-queen.html">
+            
+                    
+                    Intégrer Queen en tant que Web Component (embarqué)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="integrate-example.html">
+            
+                <a href="integrate-example.html">
+            
+                    
+                    Exemple de Pearl-Jam
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="build.html">
+            
+                <a href="build.html">
+            
+                    
+                    Étape du build
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="docker.html">
+            
+                <a href="docker.html">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Guide utilisateur</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../user-guide/user-guide.html">
+            
+                <a href="../user-guide/user-guide.html">
+            
+                    
+                    Guide utilisateur
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../user-guide/navigation.html">
+            
+                <a href="../user-guide/navigation.html">
+            
+                    
+                    Navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../user-guide/synchronize.html">
+            
+                <a href="../user-guide/synchronize.html">
+            
+                    
+                    Synchroniser
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Publié avec GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Intégrer Queen en tant que Web Component (embarqué)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="int&#xE9;grer-queen-en-tant-que-web-component-embarqu&#xE9;">Int&#xE9;grer Queen en tant que Web Component (embarqu&#xE9;)</h1>
+<p>L&apos;application Queen dispose de deux modes possibles : autonome et embarqu&#xE9;.</p>
+<p>Pour utilis&#xE9; Queen en mode embarqu&#xE9;, c&apos;est relativement simple.</p>
+<p>Admettons que l&apos;application Queen est d&#xE9;servie via l&apos;url <code>https://queen.dev.insee.io</code>.</p>
+<h2 id="charger-lapplication">Charger l&apos;application</h2>
+<p>Pour charger l&apos;application, il suffit d&apos;importer le script <code>https://queen.dev.insee.io/entry.js</code> dans le fichier <code>index.html</code> de l&apos;application &quot;parente&quot;.</p>
+<pre class="language-"><code class="lang-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>https://queen.dev.insee.io/entry.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h2 id="utiliser-lapplication">Utiliser l&apos;application</h2>
+<p>Une fois l&apos;application charg&#xE9;e, pour l&apos;utiliser, il suffit d&apos;ajouter le tag <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>queen-app</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>queen-tag</span><span class="token punctuation">&gt;</span></span></code>.</p>
+<p>L&apos;application r&#xE9;pondra &#xE0; toutes les urls commen&#xE7;ant par &quot;<a href="https://application.parente.insee.fr/**queen**" target="_blank">https://application.parente.insee.fr/**queen**</a>&quot;.</p>
+<p>Afin d&apos;&#xE9;viter toutes interf&#xE9;rences avec l&apos;application, veuillez &#xE9;viter que votre application r&#xE9;ponde elle aussi &#xE0; ce type d&apos;urls.</p>
+<p>En revanche, tant que le tag <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>queen-app</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>queen-tag</span><span class="token punctuation">&gt;</span></span></code> n&apos;est pas &#xE9;crit, l&apos;application queen n&apos;est pas active et n&apos;est pas en mesure de r&#xE9;pondre aux urls.</p>
+<h2 id="utiliser-queen-en-mode-offline">Utiliser Queen en mode offline</h2>
+<p>Le mode offline fonctionne gr&#xE2;ce &#xE0; un service-worker qui intercepte les requ&#xEA;tes et r&#xE9;pond via les r&#xE9;ponses dans le cache du navigateur.</p>
+<p>Pour utiliser Queen en mode offline, il faut importer le service-worker de Queen dans le service-worker de l&apos;application parente via <code>importScripts</code>.</p>
+<p>De plus afin de s&apos;assurer du bon fonctionnement, il faut &#xE9;galement d&#xE9;finir la variable <code>self._QUEEN_URL</code> dans le service-worker de l&apos;application m&#xE8;re avant d&apos;importer le service-worker de Queen.
+Cette variable est utilis&#xE9;e dans le service-worker de Queen.</p>
+<p>Le service-worker de l&apos;application parente doit ressembler &#xE0; &#xE7;a :</p>
+<pre class="language-"><code class="lang-js">self<span class="token punctuation">.</span>_QUEEN_URL <span class="token operator">=</span> <span class="token string">&apos;https://queen.insee.fr&apos;</span><span class="token punctuation">;</span>
+<span class="token function">importScripts</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>self<span class="token punctuation">.</span>_QUEEN_URL<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/queen-service-worker.js</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">/* le reste du service-worker */</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="api.html" class="navigation navigation-prev " aria-label="Previous page: API">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="integrate-example.html" class="navigation navigation-next " aria-label="Next page: Exemple de Pearl-Jam">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Intégrer Queen en tant que Web Component (embarqué)","level":"2.3","depth":1,"next":{"title":"Exemple de Pearl-Jam","level":"2.3.1","depth":2,"path":"developer-guide/integrate-example.md","ref":"developer-guide/integrate-example.md","articles":[]},"previous":{"title":"API","level":"2.2.6","depth":2,"path":"developer-guide/api.md","ref":"developer-guide/api.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs","image-captions","include-codeblock","collapsible-chapters"],"root":"./","styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/InseeFr/Queen/"},"search":{},"collapsible-chapters":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/InseeFr/Queen/tree/master/docs"},"theme-default":{"styles":{"website":"gitbook.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{},"image-captions":{"variable_name":"_pictures"}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[]},"title":"Queen","language":"fr","gitbook":"*"},"file":{"path":"developer-guide/integrate-queen.md","mtime":"2021-07-13T12:26:52.831Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2021-07-13T12:27:41.722Z"},"basePath":"..","book":{"language":"fr"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-anchorjs/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-anchorjs/anchor-style.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
